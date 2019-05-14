@@ -10,18 +10,18 @@ App({
         // do something when launch
         // 添加到我的小程序引导，参见文档： http://smartprogram.baidu.com/docs/design/component/guide_add/
         this.getUserInfo();
-        if (swan.canIUse('showFavoriteGuide')) {
-            swan.showFavoriteGuide({
-                type: 'bar',
-                content: '一键添加到我的小程序',
-                success(res) {
-                    console.log('添加成功：', res);
-                },
-                fail(err) {
-                    console.log('添加失败：', err);
-                }
-            });
-        }
+        // if (swan.canIUse('showFavoriteGuide')) {
+        //     swan.showFavoriteGuide({
+        //         type: 'bar',
+        //         content: '一键添加到我的小程序',
+        //         success(res) {
+        //             console.log('添加成功：', res);
+        //         },
+        //         fail(err) {
+        //             console.log('添加失败：', err);
+        //         }
+        //     });
+        // }
     },
     getUserInfo() {
         swan.login({
@@ -51,6 +51,7 @@ App({
                 
             },
             fail: (err) => {
+                console.log(err);
                 swan.showModal({
                     title: '未登录',
                     showCancel: false

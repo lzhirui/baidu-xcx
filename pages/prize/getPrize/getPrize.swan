@@ -1,0 +1,10 @@
+<view class="container">
+    <!--to do-->
+    <view class='content'>
+        <canvas canvas-id='bgCanvas' id='canvas-bg' class='canvasII'></canvas>
+        <view class='canvasI' animation="{{animation}}">
+            <canvas canvas-id='canvasI' id="canvas-one" class='canvasI' ></canvas>
+        </view>
+        <cover-image class='start' src="/images/prize/start.png" catchtap='start' ></cover-image>
+    </view>
+</view>
